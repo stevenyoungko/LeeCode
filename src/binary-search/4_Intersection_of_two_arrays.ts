@@ -27,13 +27,13 @@ function binarySearch(arr: number[], target: number) {
   while (right >= left) {
     const mid = Math.floor((left + right) / 2);
     if (arr[mid] === target) {
-      return true;
+      return true; // 找到目標元素
     }
     if (target > arr[mid]) {
-      left = mid + 1;
+      left = mid + 1; // 目標元素在右半部分
     } else {
-      right = mid - 1;
+      right = mid - 1; // 目標元素在左半部分
     }
   }
-  return false;
+  return false; // 沒有找到目標元素
 }
