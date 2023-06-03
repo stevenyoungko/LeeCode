@@ -1,5 +1,5 @@
 // index.test.ts
-import { searchInsert } from "./search_insert_position";
+import { searchInsert } from "./1_search_insert_position";
 
 describe("search insert position", () => {
   const numbs = [1, 3, 5, 6];
