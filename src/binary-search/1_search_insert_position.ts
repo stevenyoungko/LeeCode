@@ -4,13 +4,13 @@ export function searchInsert(numbs: number[], target: number): number {
   while (right >= left) {
     const mid = Math.floor((right + left) / 2);
     if (numbs[mid] === target) {
-      return mid;
+      return mid; // 直接返回中間位置的索引值
     }
     if (target > numbs[mid]) {
-      left = mid + 1;
+      left = mid + 1; // 將左邊界移動到中間位置的右邊一個位置
     } else {
-      right = mid - 1; // 如果沒找到相等的值，返回應該插入的位置
+      right = mid - 1; // 將右邊界移動到中間位置的左邊一個位置
     }
   }
-  return left;
+  return left; // 返回應該插入的位置
 }
